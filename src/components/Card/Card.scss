@@ -1,0 +1,36 @@
+.card {
+  width: 230px;
+  padding: 10px;
+  height: auto;
+  background-color: #03224C;
+  border-radius: 10px;
+  display:flex;
+  flex-direction: column;
+  margin-top: 50px;
+
+  &-image {
+    width: 230px;
+    height: 310px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &-title {
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  &-episodes {
+    text-align: center;
+    font-weight: bold;
+    color: #FFFFFF;
+  }
+
+  &-score {
+    text-align: center;
+    font-weight: bold;
+    color: #FFFFFF;
+  }
+}
