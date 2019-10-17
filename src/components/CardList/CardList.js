@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './CardList.scss';
-
 import Card from '../Card/Card.js';
+import {getAnime} from '../../utils/api';
 
 const CardList = () => {
 
@@ -9,7 +9,6 @@ const CardList = () => {
    const [list, setList] = useState([]);
 
    useEffect(() => {
-      alert('Welcome');
    }, []);
 
    const handleChange = (content) => event => {
@@ -17,16 +16,15 @@ const CardList = () => {
    };
 
    const lookForAnime = () => {
-      fetch(`https://api.jikan.moe/v3/search/anime?q=${inputValue.name}`)
-         .then((response) => response.json())
+      getAnime(inputValue.name)
          .then((data) => setList(data.results));
-
    };
 
    return (
       <div className='card-list'>
          <div className="action-box">
-            <input className='search-anime' type="text" onChange={handleChange('name')}/>
+            <input className='search-anime' type="text" placeholder="Anime - ex. Naruto"
+                   onChange={handleChange('name')}/>
             <button className='button-anime' onClick={lookForAnime}>Ajouter</button>
          </div>
          <div className='anime-list'>

@@ -1,12 +1,22 @@
 .header {
   width: 100vw;
-  height: 50px;
+  height: 45px;
   background-color: #03224C;
   margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-title {
+  font-size: 20px;
   color: #FFFFFF;
-  font-size: 30px;
-  padding-top: 10px;
-  padding-left: 10px;
+  margin-left: 10px;
+}
+.header-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=Header.css.map */
